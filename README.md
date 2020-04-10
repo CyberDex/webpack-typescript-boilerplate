@@ -16,10 +16,9 @@ or just drop the files to `webpack` forder of your project.
 
 ### 3. Put folowing scripts to `scripts` block of your package.json
 ```
-		"start": "npm run dev",
-		"dev": "webpack-dev-server --config webpack/webpack.dev.js",
-		"build": "webpack --config webpack/webpack.prod.js"
-
+"start": "npm run dev",
+"dev": "webpack-dev-server --config webpack/webpack.dev.js",
+"build": "webpack --config webpack/webpack.prod.js"
 ```
 Or just copy `package.json` to the root if you don't have it.
 
