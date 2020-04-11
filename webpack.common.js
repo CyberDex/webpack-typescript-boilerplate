@@ -4,8 +4,8 @@ const { CheckerPlugin } = require('awesome-typescript-loader')
 const { projectWay } = require('./helper')
 const build = require(projectWay('build.json'))
 
-for(point in build.entryPoint) {
-    build.entryPoint[point] = projectWay( build.entryPoint[point] )
+for(point in build.entryPoints) {
+    build.entryPoints[point] = projectWay( build.entryPoints[point] )
 }
 
 module.exports = {
