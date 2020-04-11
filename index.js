@@ -5,7 +5,7 @@ const merge = require('webpack-merge')
 
 const path = require('path')
 projectPath = path.dirname(module.parent.filename)
-const fixPath = relPath => path.resolve( projectPath + relPath )
+const fixPath = relPath => path.resolve( projectPath, relPath )
 
 const DEV = process.env.NODE_ENV === 'development'
 
