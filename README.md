@@ -36,7 +36,7 @@ npm i https://github.com/CyberDex/WebpackConfig.git -D
 
 #### Local server (https://localhost:8080)
 ```
-npm start
+npm run dev
 ```
 
 #### Production build
