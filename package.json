@@ -2,7 +2,7 @@
 	"name": "webpack-typescript-boilerplate",
 	"version": "1.0.3",
 	"description": "Webpack configuration for typescript development",
-	"main": "webpack.dev.js",
+	"main": "index.js",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/CyberDex/Webpack-typescript-boilerplate"

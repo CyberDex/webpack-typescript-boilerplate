@@ -10,12 +10,12 @@ const fixPath = relPath => path.resolve( projectPath, relPath )
 const DEV = process.env.NODE_ENV === 'development'
 
 module.exports = config => {
-    if (typeof entry !== 'object') {
+    if (typeof config.entryPoints !== 'object') {
         throw new Error('Config option "entry" must be an object')
     }
 
     for(const point in config.entryPoints) {
-        build.entryPoints[point] = fixPath( config.entryPoints[point] )
+        config.entryPoints[point] = fixPath( config.entryPoints[point] )
     }
     config.sourceFolder = fixPath( config.sourceFolder )
     config.assetsFolder = fixPath( config.assetsFolder )
@@ -26,5 +26,5 @@ module.exports = config => {
         ? require('./webpack.dev')
         : require('./webpack.prod')
 
-    return merge(commonConfig, optionalConfig)
+    return merge(commonConfig(config), optionalConfig(config))
 }
