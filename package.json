@@ -34,6 +34,7 @@
 		"webpack-cli": "^3.3.3",
 		"webpack-dev-server": "^3.10.3",
 		"webpack-merge": "^4.2.2",
-		"webpack-obfuscator": "^0.27.2"
+		"webpack-obfuscator": "^0.27.2",
+		"cross-env": "^7.0.2"
 	}
 }
