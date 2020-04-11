@@ -8,7 +8,7 @@ npm i https://github.com/CyberDex/WebpackConfig.git -D
 ## 2. Create `build.json` file in the root of the project with this config:
 ```
 {
-    "entryPoint": {
+    "entryPoints": {
         "main": "src/main.ts"
     },
     "sourceFolder": "src",
