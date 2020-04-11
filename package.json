@@ -1,6 +1,6 @@
 {
 	"name": "webpack-typescript-boilerplate",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"description": "Webpack configuration for typescript development",
 	"main": "index.js",
 	"repository": {
