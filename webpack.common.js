@@ -9,7 +9,7 @@ for(point in build.entryPoint) {
 }
 
 module.exports = {
-    entry: build.entryPoint,
+    entry: build.entryPoints,
     resolve: {
         extensions: ['.ts', '.tsx', '.js', '.jsx']
     },
