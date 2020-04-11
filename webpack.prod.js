@@ -1,11 +1,12 @@
 const TerserPlugin = require('terser-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HTMLWebpackPlugin = require('html-webpack-plugin')
-const merge = require('webpack-merge');
-const common = require('./webpack.common.js')
-const build = require('../build.json')
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const JavaScriptObfuscator = require('webpack-obfuscator')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const merge = require('webpack-merge')
+const { projectWay } = require('./helper')
+const common = require('./webpack.common.js')
+const build = require(projectWay('build.json'))
 
 module.exports = merge(common, {
     mode: 'production',
@@ -39,12 +40,12 @@ module.exports = merge(common, {
             },
         }),
         new CopyWebpackPlugin([{
-            "from": build.assetsFolder,
-            "ignore": [build.indexHTML]
+            from: projectWay( build.assetsFolder ),
+            ignore: [projectWay( build.indexHTML )]
         }]),
         new HTMLWebpackPlugin({
-            template: build.indexHTML,
-            templateParameters: build,
+            template: projectWay( build.indexHTML ),
+            templateParameters: build.templateParameters,
             minify: {
                 collapseWhitespace: true
             }
