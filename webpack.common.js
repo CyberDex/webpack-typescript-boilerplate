@@ -5,6 +5,7 @@ const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
 module.exports = config => ({
     mode: process.env.NODE_ENV,
     entry: config.entryPoints,
+    output: config.output,
     resolve: {
         extensions: ['.ts', '.tsx', '.js', '.jsx']
     },
