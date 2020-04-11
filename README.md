@@ -2,7 +2,7 @@
 
 ## 1. Install the module:
 ```
-npm i https://github.com/CyberDex/WebpackConfig.git -D
+npm i webpack-typescript-boilerplate -D
 ```
 
 ## 2. Create `build.json` file in the root of the project with this config:
@@ -26,7 +26,7 @@ npm i https://github.com/CyberDex/WebpackConfig.git -D
 - `indexHTML` - index.html template file
 - `templateParameters` - variables that you will use inside html file like this: `<title><%= title %></title>`
 
-## 3. Put folowing scripts to `scripts` block of your package.json
+## 3. Put folowing scripts to your package.json
 ```
 "dev": "webpack-dev-server --config node_modules/webpack-config/webpack.dev.js",
 "build": "webpack --config node_modules/webpack-config/webpack.prod.js"
