@@ -5,9 +5,9 @@
 	"main": "webpack.dev.js",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/CyberDex/WPConf"
+		"url": "git+https://github.com/CyberDex/WebpackConfig"
 	},
-	"homepage": "https://github.com/CyberDex/WPConf#readme",
+	"homepage": "https://github.com/CyberDex/WebpackConfig",
 	"keywords": ["webpack"],
 	"author": "CyberDex",
 	"license": "ISC",
