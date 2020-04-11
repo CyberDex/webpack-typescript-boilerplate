@@ -2,7 +2,7 @@
 
 ## 1. Install the module:
 ```
-npm i https://github.com/CyberDex/WPConf.git -D
+npm i https://github.com/CyberDex/WebpackConfig.git -D
 ```
 
 ## 2. Create `build.json` file in the root of the project with this config:
