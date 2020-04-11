@@ -17,7 +17,7 @@ cp node_modules/webpack-typescript-boilerplate/setup/webpack.config.js ./
 - `port` - webpack-dev-server port number
 - `sourceFolder` - folder for `awesome-typescript-loader` to include
 - `assetsFolder` - folder with all additional files (pictures, sounds, configs etc) witch should be included to releese build
-- `indexHTML` - main app index.html file template
+- `HTMLTemplate` - main app index.html file template
 - `templateParameters` - variables that you will use inside html file like this: `<title><%= title %></title>`
 
 ## 4. Put folowing values to `scripts` block of your package.json

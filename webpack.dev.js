@@ -15,7 +15,7 @@ module.exports = config => ({
     plugins: [
         new FriendlyErrorsWebpackPlugin(),
         new HTMLWebpackPlugin({
-            template: config.indexHTML,
+            template: config.HTMLTemplate,
             templateParameters: config.templateParameters
         })
     ]
