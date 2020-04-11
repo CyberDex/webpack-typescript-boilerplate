@@ -1,12 +1,16 @@
 {
-	"scripts": {
-		"start": "npm run dev",
-		"dev": "webpack-dev-server --config webpack/webpack.dev.js",
-		"build": "webpack --config webpack/webpack.prod.js"
+	"name": "wp-conf",
+	"version": "1.0.0",
+	"main": "webpack.common.js","repository": {
+		"type": "git",
+		"url": "git+https://github.com/CyberDex/WPConf"
 	},
-	"repository": "https://github.com/CyberDex/WebpackBoiler",
-	"license": "MIT",
-	"devDependencies": {
+	"homepage": "https://github.com/CyberDex/WPConf#readme",
+	"description": "Webpack typescript config",
+	"keywords": ["webpack"],
+	"author": "CyberDex",
+	"license": "ISC",
+	"dependencies": {
 		"@babel/core": "^7.4.5",
 		"@babel/preset-env": "^7.4.5",
 		"awesome-typescript-loader": "^5.2.1",
@@ -26,6 +30,5 @@
 		"webpack-dev-server": "^3.10.3",
 		"webpack-merge": "^4.2.2",
 		"webpack-obfuscator": "^0.27.2"
-	},
-	"dependencies": {}
+	}
 }
