@@ -3,13 +3,8 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HTMLWebpackPlugin = require('html-webpack-plugin')
 const JavaScriptObfuscator = require('webpack-obfuscator')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-const merge = require('webpack-merge')
-const { projectWay } = require('./helper')
-const common = require('./webpack.common.js')
-const build = require(projectWay('build.json'))
 
-module.exports = merge(common, {
-    mode: 'production',
+module.exports = config => ({
     output: {
         filename: 'js/[name].[contenthash].bundle.js',
         chunkFilename: 'js/[name].[contenthash].chunk.js'
@@ -40,14 +35,16 @@ module.exports = merge(common, {
             },
         }),
         new CopyWebpackPlugin([{
-            from: projectWay( build.assetsFolder ),
-            ignore: [projectWay( build.indexHTML )]
+            from: config.assetsFolder,
+            ignore: [config.HTMLTemplate]
         }]),
         new HTMLWebpackPlugin({
-            template: projectWay( build.indexHTML ),
-            templateParameters: build.templateParameters,
+            template: config.HTMLTemplate,
+            templateParameters: config.templateParameters,
             minify: {
-                collapseWhitespace: true
+                collapseWhitespace: true,
+                preserveLineBreaks: true,
+                minifyJS: true
             }
         })
     ]

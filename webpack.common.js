@@ -1,15 +1,10 @@
-const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
 const HardSourceWebpackPlugin = require('hard-source-webpack-plugin')
 const { CheckerPlugin } = require('awesome-typescript-loader')
-const { projectWay } = require('./helper')
-const build = require(projectWay('build.json'))
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
 
-for(point in build.entryPoints) {
-    build.entryPoints[point] = projectWay( build.entryPoints[point] )
-}
-
-module.exports = {
-    entry: build.entryPoints,
+module.exports = config => ({
+    mode: process.env.NODE_ENV,
+    entry: config.entryPoints,
     resolve: {
         extensions: ['.ts', '.tsx', '.js', '.jsx']
     },
@@ -17,7 +12,7 @@ module.exports = {
         rules: [{
             test: /\.tsx?$/,
             loader: 'awesome-typescript-loader',
-            include: projectWay( build.sourceFolder ),
+            include: config.sourceFolder,
             options: {
                 transpileOnly: true,
                 happyPackMode: true
@@ -32,4 +27,4 @@ module.exports = {
             checkSyntacticErrors: true
         })
     ]
-}
+})

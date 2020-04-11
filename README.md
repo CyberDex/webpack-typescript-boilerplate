@@ -6,34 +6,27 @@
 npm i webpack-typescript-boilerplate -D
 ```
 
-## 2. Create `build.json` file in the root of the project with this config:
+## 2. Copy config file from module:
 ```
-{
-    "entryPoints": {
-        "main": "src/main.ts"
-    },
-    "sourceFolder": "src",
-    "assetsFolder": "assets",
-    "indexHTML": "assets/index.html",
-    "templateParameters": {
-        "title": "Webpack"
-    }
-}
+cp node_modules/webpack-typescript-boilerplate/setup/webpack.config.js ./
 ```
-### Description:
-- `entryPoints` - array of ts files entry points for webpack
+
+## 3. Change config inside copied file according to these values:
+- `entryPoints` - an array of ts files to bundle separately
+- `output` - build directory
+- `port` - webpack-dev-server port number
 - `sourceFolder` - folder for `awesome-typescript-loader` to include
 - `assetsFolder` - folder with all additional files (pictures, sounds, configs etc) witch should be included to releese build
-- `indexHTML` - index.html template file
+- `indexHTML` - main app index.html file template
 - `templateParameters` - variables that you will use inside html file like this: `<title><%= title %></title>`
 
-## 3. Put folowing scripts to your package.json
+## 4. Put folowing values to `scripts` block of your package.json
 ```
-"dev": "webpack-dev-server --config node_modules/webpack-config/webpack.dev.js",
-"build": "webpack --config node_modules/webpack-config/webpack.prod.js"
+"dev": "cross-env NODE_ENV=development webpack-dev-server",
+"build": "cross-env NODE_ENV=production webpack"
 ```
 
-## 4. Use it:
+## 5. Use it:
 
 #### Local server (https://localhost:8080)
 ```

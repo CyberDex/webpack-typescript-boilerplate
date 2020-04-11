@@ -1,14 +1,14 @@
 {
-	"name": "webpack-config",
+	"name": "webpack-typescript-boilerplate",
 	"version": "1.0.0",
-	"description": "Webpack typescript config",
+	"description": "Webpack configuration for typescript development",
 	"main": "webpack.dev.js",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/CyberDex/WebpackConfig"
+		"url": "git+https://github.com/CyberDex/Webpack-typescript-boilerplate"
 	},
-	"homepage": "https://github.com/CyberDex/WebpackConfig",
-	"keywords": ["webpack"],
+	"homepage": "https://github.com/CyberDex/Webpack-typescript-boilerplate",
+	"keywords": ["webpack", "typescript", "boilerplate"],
 	"author": "CyberDex",
 	"license": "ISC",
 	"dependencies": {
