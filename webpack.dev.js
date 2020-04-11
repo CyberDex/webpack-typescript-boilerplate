@@ -20,8 +20,8 @@ module.exports = merge(common, {
     plugins: [
         new FriendlyErrorsWebpackPlugin(),
         new HTMLWebpackPlugin({
-            template: projectWay( build.indexHTML) ,
-            templateParameters: build
+            template: projectWay( build.indexHTML ) ,
+            templateParameters: build.templateParameters
         })
     ]
 });
