@@ -1,12 +1,13 @@
 {
 	"name": "wp-conf",
 	"version": "1.0.0",
-	"main": "webpack.common.js","repository": {
+	"description": "Webpack typescript config",
+	"main": "webpack.dev.js",
+	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/CyberDex/WPConf"
 	},
 	"homepage": "https://github.com/CyberDex/WPConf#readme",
-	"description": "Webpack typescript config",
 	"keywords": ["webpack"],
 	"author": "CyberDex",
 	"license": "ISC",
