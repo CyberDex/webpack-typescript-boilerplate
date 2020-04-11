@@ -28,8 +28,8 @@ npm i https://github.com/CyberDex/WebpackConfig.git -D
 
 ## 3. Put folowing scripts to `scripts` block of your package.json
 ```
-"dev": "webpack-dev-server --config node_modules/wp-conf/webpack.dev.js",
-"build": "webpack --config node_modules/wp-conf/webpack.prod.js"
+"dev": "webpack-dev-server --config node_modules/webpack-config/webpack.dev.js",
+"build": "webpack --config node_modules/webpack-config/webpack.prod.js"
 ```
 
 ## 4. Use it:

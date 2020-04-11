@@ -1,5 +1,5 @@
 {
-	"name": "wp-conf",
+	"name": "webpack-config",
 	"version": "1.0.0",
 	"description": "Webpack typescript config",
 	"main": "webpack.dev.js",
