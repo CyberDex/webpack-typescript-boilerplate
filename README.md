@@ -1,5 +1,5 @@
 # Webpack typescript config 
-> [![npm version](https://badge.fury.io/js/webpack-typescript-boilerplate.svg)](https://badge.fury.io/js/webpack-typescript-boilerplate)
+[![npm version](https://badge.fury.io/js/webpack-typescript-boilerplate.svg)](https://badge.fury.io/js/webpack-typescript-boilerplate)
 
 ## 1. Install the module:
 ```
