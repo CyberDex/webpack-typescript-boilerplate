@@ -1,5 +1,4 @@
-# Webpack typescript config 
-[![npm version](https://badge.fury.io/js/webpack-typescript-boilerplate.svg)](https://badge.fury.io/js/webpack-typescript-boilerplate)
+# Webpack typescript boilerplate [![npm version](https://badge.fury.io/js/webpack-typescript-boilerplate.svg)](https://badge.fury.io/js/webpack-typescript-boilerplate)
 
 ## 1. Install the module:
 ```
@@ -8,13 +7,11 @@ npm i webpack-typescript-boilerplate -D
 
 ## 2. Copy config file from module:
 ```
-cp node_modules/webpack-typescript-boilerplate/setup/webpack.config.js ./
+cp node_modules/webpack-typescript-boilerplate/setup/npm/webpack.config.js ./
 ```
 
 ## 3. Change config inside copied file according to these values:
 - `entryPoints` - an array of ts files to bundle separately
-- `output` - build directory
-- `port` - webpack-dev-server port number
 - `sourceFolder` - folder for `awesome-typescript-loader` to include
 - `assetsFolder` - folder with all additional files (pictures, sounds, configs etc) witch should be included to releese build
 - `HTMLTemplate` - main app index.html file template
