@@ -10,8 +10,7 @@ module.exports = config => ({
         host: '0.0.0.0',
         overlay: true,
         compress: true,
-        watchContentBase: true,
-        port: config.port
+        watchContentBase: true
     },
     plugins: [
         new FriendlyErrorsWebpackPlugin(),
