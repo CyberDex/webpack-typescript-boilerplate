@@ -1,11 +1,13 @@
-# Webpack typescript boilerplate 
-
-<p align="right">
-  <a href="https://www.npmjs.com/package/webpack-typescript-boilerplate">
+<table border="0" width="100%">
+<tr><td width="99%"><h1>Webpack typescript boilerplate</h1></td>
+<td>
+<a href="https://www.npmjs.com/package/webpack-typescript-boilerplate">
     <img alt="NPM Status" src="https://img.shields.io/npm/v/webpack-typescript-boilerplate.svg?style=for-the-badge">
     <img alt="npm" src="https://img.shields.io/npm/dt/webpack-typescript-boilerplate?style=for-the-badge">
   </a>
-</p>
+</td>
+</tr>
+<table>
 
 ## 1. Install the module:
 ```
