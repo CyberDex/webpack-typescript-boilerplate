@@ -3,7 +3,7 @@
     <img alt="NPM Status" src="https://img.shields.io/npm/v/webpack-typescript-boilerplate.svg?style=for-the-badge"><img alt="npm" src="https://img.shields.io/npm/dt/webpack-typescript-boilerplate?style=for-the-badge">
 </a>
 
-## 1. Install the module:
+## 1. Install:
 ```
 npm i webpack-typescript-boilerplate -D
 ```
