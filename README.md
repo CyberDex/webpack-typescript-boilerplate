@@ -7,7 +7,7 @@ npm i webpack-typescript-boilerplate -D
 
 ## 2. Copy config file from module:
 ```
-cp node_modules/webpack-typescript-boilerplate/setup/npm/webpack.config.js ./
+cp node_modules/webpack-typescript-boilerplate/setup/webpack.config.js ./
 ```
 
 ## 3. Change config inside copied file according to these values:
