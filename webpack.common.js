@@ -1,4 +1,3 @@
-const HardSourceWebpackPlugin = require('hard-source-webpack-plugin')
 const { CheckerPlugin } = require('awesome-typescript-loader')
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
 
@@ -20,7 +19,6 @@ module.exports = config => ({
         }]
     },
     plugins: [
-        new HardSourceWebpackPlugin(),
         new CheckerPlugin(),
         new ForkTsCheckerWebpackPlugin({
             silent: true,
