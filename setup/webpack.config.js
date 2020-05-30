@@ -10,5 +10,6 @@ module.exports = webpackConfig({
     HTMLTemplate: "assets/index.html",
     templateParameters: {
         "title": "Webpack typescript boilerplate"
-    }
+    },
+    https: false
 })
