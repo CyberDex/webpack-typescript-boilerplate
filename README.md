@@ -18,14 +18,15 @@ cp node_modules/webpack-typescript-boilerplate/setup/webpack.config.js ./
 
 ## 3. Change config inside copied file according to these values:
 
-- `entryPoints` - an array of ts files to bundle separately
-- `sourceFolder` - folder for `awesome-typescript-loader` to include
-- `assetsFolder` - folder with all additional files (pictures, sounds, configs etc) witch should be included to releese build
-- `HTMLTemplate` - main app index.html file template
-- `templateParameters` - variables that you will use inside html file like this: `<title><%= title %></title>`
-- `https` - run DevServer with https
+-   `entryPoints` - an array of ts files to bundle separately
+-   `sourceFolder` - folder for `awesome-typescript-loader` to include
+-   `assetsFolder` - folder with all additional files (pictures, sounds, configs etc.) witch should be included to release build
+-   `HTMLTemplate` - main app index.html file template
+-   `templateParameters` - variables that you will use inside html file like this: `<title><%= title %></title>`
+-   `https` - run DevServer with https (by default it's off)
+-   `port` - port number for local server (by default it will be 8080)
 
-## 4. Put folowing values to `scripts` block of your package.json
+## 4. Put following values to `scripts` block of your package.json
 
 ```
 "dev": "cross-env NODE_ENV=development webpack-dev-server",
