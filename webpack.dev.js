@@ -11,7 +11,8 @@ module.exports = config => ({
         overlay: true,
         compress: true,
         watchContentBase: true,
-        https: config.https || false
+        https: config.https || false,
+        port: config.port || 8080
     },
     plugins: [
         new FriendlyErrorsWebpackPlugin(),
