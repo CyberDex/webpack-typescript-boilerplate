@@ -3,22 +3,11 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HTMLWebpackPlugin = require('html-webpack-plugin')
 const JavaScriptObfuscator = require('webpack-obfuscator')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const ZipPlugin = require('zip-webpack-plugin')
 
-module.exports = config => ({
-    output: {
-        filename: 'js/[name].[contenthash].bundle.js',
-        chunkFilename: 'js/[name].[contenthash].chunk.js'
-    },
-    optimization: {
-        splitChunks: {
-            cacheGroups: {
-                commons: {
-                    filename: '[name].[contenthash].bundle.js'
-                }
-            }
-        }
-    },
-    plugins: [
+module.exports = config => {
+
+    const plugins = [
         new CleanWebpackPlugin(),
         new JavaScriptObfuscator(
             {
@@ -48,4 +37,38 @@ module.exports = config => ({
             }
         })
     ]
-})
+
+    if (config.zipProdBuild) {
+        plugins.push(
+            new ZipPlugin({
+                filename: 'dist/dist.zip',
+                fileOptions: {
+                    mtime: new Date(),
+                    mode: 0o100664,
+                    compress: true,
+                    forceZip64Format: false,
+                },
+                zipOptions: {
+                    forceZip64Format: false,
+                },
+            })
+        )
+    }
+
+    return {
+        output: {
+            filename: 'js/[name].[contenthash].bundle.js',
+            chunkFilename: 'js/[name].[contenthash].chunk.js'
+        },
+        optimization: {
+            splitChunks: {
+                cacheGroups: {
+                    commons: {
+                        filename: '[name].[contenthash].bundle.js'
+                    }
+                }
+            }
+        },
+        plugins
+    }
+}
