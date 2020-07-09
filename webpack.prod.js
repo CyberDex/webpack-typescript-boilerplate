@@ -4,6 +4,7 @@ const HTMLWebpackPlugin = require('html-webpack-plugin')
 const JavaScriptObfuscator = require('webpack-obfuscator')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const ZipPlugin = require('zip-webpack-plugin')
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = config => {
 
@@ -37,6 +38,10 @@ module.exports = config => {
             }
         })
     ]
+
+    if (config.analyze) {
+        plugins.push(new BundleAnalyzerPlugin())
+    }
 
     if (config.zipProdBuild) {
         plugins.push(
