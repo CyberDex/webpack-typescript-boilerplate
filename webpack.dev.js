@@ -1,5 +1,5 @@
-const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin')
-const HTMLWebpackPlugin = require('html-webpack-plugin')
+import FriendlyErrorsWebpackPlugin from 'friendly-errors-webpack-plugin'
+import HTMLWebpackPlugin from 'html-webpack-plugin'
 
 module.exports = config => ({
     devtool: 'cheap-module-eval-source-map',

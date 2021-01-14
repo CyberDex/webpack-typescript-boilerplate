@@ -9,13 +9,13 @@ module.exports = config => {
 
     const path = require('path')
     projectPath = path.dirname(module.parent.filename)
-    const fixPath = relPath => path.resolve( projectPath, relPath )
-    for(const point in config.entryPoints) {
-        config.entryPoints[point] = fixPath( config.entryPoints[point] )
+    const fixPath = relPath => path.resolve(projectPath, relPath)
+    for (const point in config.entryPoints) {
+        config.entryPoints[point] = fixPath(config.entryPoints[point])
     }
-    config.sourceFolder = fixPath( config.sourceFolder )
-    config.assetsFolder = fixPath( config.assetsFolder )
-    config.HTMLTemplate = fixPath( config.HTMLTemplate )
+    config.sourceFolder = fixPath(config.sourceFolder)
+    config.assetsFolder = fixPath(config.assetsFolder)
+    config.HTMLTemplate = fixPath(config.HTMLTemplate)
 
     const DEV = process.env.NODE_ENV === 'development'
     const commonConfig = require('./webpack.common')
